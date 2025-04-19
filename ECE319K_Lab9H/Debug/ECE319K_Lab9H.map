@@ -1,0 +1,873 @@
+******************************************************************************
+            TI ARM Clang Linker Unix v4.0.1                    
+******************************************************************************
+>> Linked Sat Apr 19 00:46:43 2025
+
+OUTPUT FILE NAME:   <ECE319K_Lab9H.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00003209
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00005608  0001a9f8  R  X
+  SRAM                  20200000   00008000  00000a1f  000075e1  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00005608   00005608    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    000034a0   000034a0    r-x .text
+  00003560    00003560    00001f98   00001f98    r-- .rodata
+  000054f8    000054f8    00000008   00000008    r-- .init_array
+  00005500    00005500    00000108   00000108    r-- .cinit
+20200000    20200000    00000822   00000000    rw-
+  20200000    20200000    00000445   00000000    rw- .data
+  20200448    20200448    00000200   00000000    rw- .sysmem
+  20200648    20200648    000001da   00000000    rw- .bss
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
+
+.binit     0    00000000    00000000     
+
+.text      0    000000c0    000034a0     
+                  000000c0    000002d8     SpaceInvaders.o (.text._Z9Game_Drawv)
+                  00000398    000002cc     SpaceInvaders.o (.text._Z15CheckCollisionsv)
+                  00000664    00000284     libc.a : _printfi.c.obj (.text:__TI_printfi_minimal)
+                  000008e8    00000210     ST7735.o (.text._Z17ST7735_DrawBitmapssPKtss)
+                  00000af8    000001dc     SpaceInvaders.o (.text._Z13UpdateEnemiesv)
+                  00000cd4    000001b8     SpaceInvaders.o (.text._Z9Menu_Drawv)
+                  00000e8c    000001b4     Clock.o (.text._Z15Clock_Init80MHzi)
+                  00001040    000001a8     ST7735.o (.text._Z15ST7735_DrawCharsscssh)
+                  000011e8    00000198     SpaceInvaders.o (.text._Z11Game_Updatev)
+                  00001380    00000160     SpaceInvaders.o (.text._Z12DrawGameOverv)
+                  000014e0    00000154     libc.a : fopen.c.obj (.text._openfile)
+                  00001634    00000118     ST7735.o (.text._Z15ST7735_FillRectsssst)
+                  0000174c    00000114     SpaceInvaders.o (.text._Z11InitEnemiesv)
+                  00001860    00000114     libc.a : memory.c.obj (.text.aligned_alloc)
+                  00001974    000000f8     SPI.o (.text._Z8SPI_Initv)
+                  00001a6c    000000f4     ST7735.o (.text._Z18ST7735_SetRotationh)
+                  00001b60    000000ec     libsysbm.a : add_device.c.obj (.text.add_device)
+                  00001c4c    000000e8     ST7735.o (.text._Z14ST7735_OutCharc)
+                  00001d34    000000e8     libc.a : memory.c.obj (.text.free)
+                  00001e1c    000000e0            : setvbuf.c.obj (.text.setvbuf)
+                  00001efc    000000b0     ST7735.o (.text._Z20ST7735_DrawFastVLinessst)
+                  00001fac    000000a2     ST7735.o (.text._ZL11commandListPKh)
+                  0000204e    00000002     Sound.o (.text.SysTick_Handler)
+                  00002050    000000a0     ST7735.o (.text._Z12ST7735_InitR10initRFlags)
+                  000020f0    000000a0     ST7735.o (.text._Z17ST7735_InitPrintf10initRFlags)
+                  00002190    000000a0     libsysbm.a : open.c.obj (.text.open)
+                  00002230    00000088     ST7735.o (.text._ZL13setAddrWindowhhhh)
+                  000022b8    00000008     Lab9HMain.o (.text._GLOBAL__sub_I_Lab9HMain.cpp)
+                  000022c0    00000088     libc.a : strcmp-armv6m.S.obj (.text:strcmp)
+                  00002348    00000084     ST7735.o (.text._Z17ST7735_DrawStringttPcs)
+                  000023cc    0000007c     SpaceInvaders.o (.text._Z11Menu_Updatev)
+                  00002448    0000007c     LaunchPad.o (.text._Z14LaunchPad_Initv)
+                  000024c4    0000007c     SpaceInvaders.o (.text._Z9Game_Initv)
+                  00002540    0000007c     SlidePot.o (.text._ZN8SlidePot4InitEv)
+                  000025bc    0000007c     libc.a : fclose.c.obj (.text.__TI_closefile)
+                  00002638    0000007c            : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  000026b4    00000074     SpaceInvaders.o (.text._Z15FireEnemyBulletss)
+                  00002728    0000006c     libsysbm.a : hostlseek.c.obj (.text.HOSTlseek)
+                  00002794    0000006c                : hostrename.c.obj (.text.HOSTrename)
+                  00002800    0000006c     SpaceInvaders.o (.text._Z10FireBulletv)
+                  0000286c    0000006c     libc.a : getdevice.c.obj (.text.getdevice)
+                  000028d8    00000064            : memory.c.obj (.text.split)
+                  0000293c    00000060     libsysbm.a : hostopen.c.obj (.text.HOSTopen)
+                  0000299c    00000058                : hostread.c.obj (.text.HOSTread)
+                  000029f4    00000058                : hostwrite.c.obj (.text.HOSTwrite)
+                  00002a4c    00000056     libclang_rt.builtins.a : aeabi_idivmod.S.obj (.text.__aeabi_idivmod)
+                  00002aa2    00000002     Sound.o (.text._Z10Sound_Initv)
+                  00002aa4    00000054     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit)
+                  00002af8    00000052            : fflush.c.obj (.text.__TI_doflush)
+                  00002b4a    00000002     Sound.o (.text._Z12Sound_Killedv)
+                  00002b4c    00000050     libsysbm.a : close.c.obj (.text.close)
+                  00002b9c    00000048                : hostclose.c.obj (.text.HOSTclose)
+                  00002be4    00000048                : hostunlink.c.obj (.text.HOSTunlink)
+                  00002c2c    00000048     SPI.o (.text._Z14SPI_OutCommandc)
+                  00002c74    00000048     SlidePot.o (.text._ZN8SlidePot2InEv)
+                  00002cbc    00000040     TExaS.o (.text.TIMG7_IRQHandler)
+                  00002cfc    00000040     SPI.o (.text._Z9SPI_Resetv)
+                  00002d3c    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00002d7c    00000040     libc.a : fopen.c.obj (.text._search_fp)
+                  00002dbc    00000038     SPI.o (.text._Z11SPI_OutDatac)
+                  00002df4    00000038     LaunchPad.o (.text._Z15ActivatePortA_Bv)
+                  00002e2c    00000038     libc.a : sprintf.c.obj (.text.sprintf)
+                  00002e64    00000034     ST7735.o (.text._Z12ST7735_writeiPKcj)
+                  00002e98    00000034     Clock.o (.text._Z14Clock_Delay1msj)
+                  00002ecc    00000034     ST7735.o (.text._Z16ST7735_SetCursorjj)
+                  00002f00    00000034     libc.a : fopen.c.obj (.text.__TI_cleanup)
+                  00002f34    00000034     libsysbm.a : trgmsg.c.obj (.text.__TI_readmsg)
+                  00002f68    00000034                : trgmsg.c.obj (.text.__TI_writemsg)
+                  00002f9c    00000034     libc.a : exit.c.obj (.text.exit)
+                  00002fd0    00000034            : getdevice.c.obj (.text.finddevice)
+                  00003004    00000034            : fopen.c.obj (.text.freopen)
+                  00003038    00000032     ST7735.o (.text._Z15ST7735_Color565hhh)
+                  0000306a    00000032     SpaceInvaders.o (.text._Z17GetPointsForEnemyh)
+                  0000309c    00000032     Lab9HMain.o (.text.main)
+                  000030ce    00000002     Sound.o (.text._Z15Sound_Explosionv)
+                  000030d0    00000030     ST7735.o (.text._ZL10commonInitPKh)
+                  00003100    00000030     SlidePot.o (.text._ZN8SlidePot7ConvertEj)
+                  00003130    00000030     libc.a : fopen.c.obj (.text.fopen)
+                  00003160    0000002c     ST7735.o (.text._Z17ST7735_FillScreent)
+                  0000318c    0000002c     libsysbm.a : unlink.c.obj (.text.unlink)
+                  000031b8    00000028     libc.a : memory.c.obj (.text.free_list_insert)
+                  000031e0    00000028     libsysbm.a : write.c.obj (.text.write)
+                  00003208    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  00003230    00000026     ST7735.o (.text._Z16ST7735_OutStringPc)
+                  00003256    00000022     SlidePot.o (.text._ZN8SlidePot4SaveEj)
+                  00003278    00000022     libc.a : memccpy.c.obj (.text.memccpy)
+                  0000329a    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  0000329c    00000020     Lab9HMain.o (.text._Z8Random32v)
+                  000032bc    00000020     Switch.o (.text._Z9Switch_Inv)
+                  000032dc    0000001e     ST7735.o (.text._ZL9pushColort)
+                  000032fa    0000001e     SlidePot.o (.text._ZN8SlidePotC2Ejj)
+                  00003318    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  00003334    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  00003350    0000001c     ST7735.o (.text._Z11ST7735_openPKcji)
+                  0000336c    0000001c     libc.a : memory.c.obj (.text.free_list_remove)
+                  00003388    00000018     Switch.o (.text._Z11Switch_Initv)
+                  000033a0    00000018     Lab9HMain.o (.text._Z6Randomj)
+                  000033b8    00000018     Lab9HMain.o (.text.__cxx_global_var_init)
+                  000033d0    00000018     libc.a : sprintf.c.obj (.text._outs)
+                  000033e8    00000016     ST7735.o (.text._Z11ST7735_readiPcj)
+                  000033fe    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00003414    00000014     Sound.o (.text._Z11Sound_Shootv)
+                  00003428    00000014     ST7735.o (.text._Z19ST7735_SetTextColort)
+                  0000343c    00000012     libc.a : memcpy16.S.obj (.text:TI_memcpy_small)
+                  0000344e    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  00003460    00000010     Clock.o (.text._Z11Clock_Delayj)
+                  00003470    0000000e     libc.a : memory.c.obj (.text.OUTLINED_FUNCTION_0)
+                  0000347e    0000000e     ST7735.o (.text._Z12ST7735_lseekili)
+                  0000348c    0000000e     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memset)
+                  0000349a    0000000e     libsysbm.a : hostrename.c.obj (.text.strcpy)
+                  000034a8    0000000e     libc.a : _printfi.c.obj (.text.strlen)
+                  000034b6    0000000e            : strlen.c.obj (.text.strlen)
+                  000034c4    0000000e     libsysbm.a : hostrename.c.obj (.text.strlen)
+                  000034d2    0000000e     libc.a : memset16.S.obj (.text:TI_memset_small)
+                  000034e0    0000000c     Clock.o (.text._Z10Clock_Freqv)
+                  000034ec    0000000c     ST7735.o (.text._Z13ST7735_renamePKcS0_)
+                  000034f8    0000000c     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memclr)
+                  00003504    0000000c     libc.a : memory.c.obj (.text.malloc)
+                  00003510    0000000a     Sound.o (.text._Z11Sound_StartPKhj)
+                  0000351a    0000000a     ST7735.o (.text._Z12ST7735_closei)
+                  00003524    0000000a     ST7735.o (.text._Z13ST7735_unlinkPKc)
+                  0000352e    0000000a     libc.a : sprintf.c.obj (.text._outc)
+                  00003538    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  00003540    00000008     libsysbm.a : remove.c.obj (.text.remove)
+                  00003548    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  0000354c    00000004     Lab9HMain.o (.text._Z16EnableInterruptsv)
+                  00003550    00000004     Lab9HMain.o (.text._Z17DisableInterruptsv)
+                  00003554    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00003558    00000004            : exit.c.obj (.text:abort)
+                  0000355c    00000002            : _lock.c.obj (.text._nop)
+                  0000355e    00000002     --HOLE-- [fill = 0]
+
+.cinit     0    00005500    00000108     
+                  00005500    000000e3     (.cinit..data.load) [load image, compression = lzss]
+                  000055e3    00000001     --HOLE-- [fill = 0]
+                  000055e4    0000000c     (__TI_handler_table)
+                  000055f0    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  000055f8    00000010     (__TI_cinit_table)
+
+.rodata    0    00003560    00001f98     
+                  00003560    00000ff0     Sound.o (.rodata._ZL5shoot)
+                  00004550    000004fb     ST7735.o (.rodata._ZL4Font)
+                  00004a4b    00000001     --HOLE-- [fill = 0]
+                  00004a4c    00000140     SpaceInvaders.o (.rodata._ZL18SmallEnemy10pointA)
+                  00004b8c    00000140     SpaceInvaders.o (.rodata._ZL18SmallEnemy10pointB)
+                  00004ccc    00000140     SpaceInvaders.o (.rodata._ZL18SmallEnemy20pointA)
+                  00004e0c    00000140     SpaceInvaders.o (.rodata._ZL18SmallEnemy20pointB)
+                  00004f4c    00000140     SpaceInvaders.o (.rodata._ZL18SmallEnemy30pointA)
+                  0000508c    00000140     SpaceInvaders.o (.rodata._ZL18SmallEnemy30pointB)
+                  000051cc    00000120     SpaceInvaders.o (.rodata._ZL11PlayerShip0)
+                  000052ec    0000003b     ST7735.o (.rodata._ZL5Rcmd1)
+                  00005327    0000002b     ST7735.o (.rodata._ZL5Rcmd3)
+                  00005352    00000016     ST7735.o (.rodata.str1.122836920652059128081)
+                  00005368    00000011     libc.a : _printfi.c.obj (.rodata.str1.153638888446227384661)
+                  00005379    00000011     SpaceInvaders.o (.rodata.str1.22607624910398542491)
+                  0000538a    00000010     SpaceInvaders.o (.rodata.str1.158572713165490630941)
+                  0000539a    00000010     SpaceInvaders.o (.rodata.str1.73576191693106105861)
+                  000053aa    0000000e     SpaceInvaders.o (.rodata.str1.82250800259262287961)
+                  000053b8    0000000d     ST7735.o (.rodata._ZL10Rcmd2green)
+                  000053c5    0000000d     ST7735.o (.rodata._ZL8Rcmd2red)
+                  000053d2    0000000d     SpaceInvaders.o (.rodata.str1.126356146683204964771)
+                  000053df    0000000d     SpaceInvaders.o (.rodata.str1.129572525541485588981)
+                  000053ec    0000000d     SpaceInvaders.o (.rodata.str1.151654306217738699421)
+                  000053f9    0000000d     SpaceInvaders.o (.rodata.str1.17151203430048108861)
+                  00005406    0000000d     SpaceInvaders.o (.rodata.str1.27155952264240474801)
+                  00005413    0000000d     SpaceInvaders.o (.rodata.str1.36803383288092517641)
+                  00005420    0000000c     SpaceInvaders.o (.rodata.str1.128093310095293125171)
+                  0000542c    0000000b     SpaceInvaders.o (.rodata.str1.11534637755791078201)
+                  00005437    0000000b     SpaceInvaders.o (.rodata.str1.59476671834391855911)
+                  00005442    0000000b     SpaceInvaders.o (.rodata.str1.76812789127237873221)
+                  0000544d    0000000a     SpaceInvaders.o (.rodata.str1.134554609671891231071)
+                  00005457    00000009     SpaceInvaders.o (.rodata.str1.113455928457461834801)
+                  00005460    00000009     SpaceInvaders.o (.rodata.str1.124090172824523317751)
+                  00005469    00000009     SpaceInvaders.o (.rodata.str1.146838672865650765551)
+                  00005472    00000009     SpaceInvaders.o (.rodata.str1.152501808942611038211)
+                  0000547b    00000009     SpaceInvaders.o (.rodata.str1.18102530480430616541)
+                  00005484    00000009     SpaceInvaders.o (.rodata.str1.69780791025295292681)
+                  0000548d    00000008     SpaceInvaders.o (.rodata.str1.104347697205965270581)
+                  00005495    00000008     SpaceInvaders.o (.rodata.str1.127922092910263891081)
+                  0000549d    00000008     SpaceInvaders.o (.rodata.str1.166557000625289634911)
+                  000054a5    00000008     ST7735.o (.rodata.str1.25256184779576059001)
+                  000054ad    00000008     SpaceInvaders.o (.rodata.str1.43491097815102817811)
+                  000054b5    00000008     SpaceInvaders.o (.rodata.str1.65143931421867754111)
+                  000054bd    00000007     ST7735.o (.rodata.str1.101350367053095507441)
+                  000054c4    00000007     SpaceInvaders.o (.rodata.str1.123971565942746539571)
+                  000054cb    00000007     SpaceInvaders.o (.rodata.str1.168079442440807502171)
+                  000054d2    00000007     SpaceInvaders.o (.rodata.str1.181300476052182914661)
+                  000054d9    00000007     ST7735.o (.rodata.str1.69399471580638778771)
+                  000054e0    00000006     SpaceInvaders.o (.rodata.str1.12910144148299471181)
+                  000054e6    00000006     SpaceInvaders.o (.rodata.str1.32717741708719027941)
+                  000054ec    00000003     SpaceInvaders.o (.rodata.str1.147177324015770664311)
+                  000054ef    00000002     SpaceInvaders.o (.rodata.str1.174069591463554271391)
+                  000054f1    00000002     ST7735.o (.rodata.str1.21722789313237470961)
+                  000054f3    00000005     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    000054f8    00000008     
+                  000054f8    00000004     Lab9HMain.o (.init_array)
+                  000054fc    00000004     --HOLE-- [fill = 0]
+
+.data      0    20200000    00000445     UNINITIALIZED
+                  20200000    0000014a     SpaceInvaders.o (.data.enemies)
+                  2020014a    00000002     SpaceInvaders.o (.data._ZL11enemyBlockX)
+                  2020014c    000000f0     libc.a : defs.c.obj (.data._ftable)
+                  2020023c    00000078     libsysbm.a : host_device.c.obj (.data._device)
+                  202002b4    00000050                : host_device.c.obj (.data._stream)
+                  20200304    00000030     SpaceInvaders.o (.data.enemyBullets)
+                  20200334    0000001e     SpaceInvaders.o (.data._ZL7bullets)
+                  20200352    00000002     SpaceInvaders.o (.data._ZL11enemyBlockY)
+                  20200354    00000014     Lab9HMain.o (.data.Sensor)
+                  20200368    00000010     SpaceInvaders.o (.data.GAME_OVER_TEXT)
+                  20200378    00000010     SpaceInvaders.o (.data.LANGUAGE_TEXT)
+                  20200388    00000010     SpaceInvaders.o (.data.LIVES_TEXT)
+                  20200398    00000010     SpaceInvaders.o (.data.PLAY_AGAIN_TEXT)
+                  202003a8    00000010     SpaceInvaders.o (.data.SCORE_TEXT)
+                  202003b8    00000010     SpaceInvaders.o (.data.SLIDE_SELECT)
+                  202003c8    00000010     SpaceInvaders.o (.data.START_TEXT)
+                  202003d8    00000010     SpaceInvaders.o (.data.TITLE)
+                  202003e8    00000010     SpaceInvaders.o (.data.WIN_TEXT)
+                  202003f8    00000008     libc.a : exit.c.obj (.data..L_MergedGlobals)
+                  20200400    00000004     SpaceInvaders.o (.data.AUTHOR)
+                  20200404    00000004     Clock.o (.data.BusFreq)
+                  20200408    00000004     Lab9HMain.o (.data.M)
+                  2020040c    00000004     ST7735.o (.data.StX)
+                  20200410    00000004     ST7735.o (.data.StY)
+                  20200414    00000004     SpaceInvaders.o (.data._ZL11moveCounter)
+                  20200418    00000004     SpaceInvaders.o (.data._ZL15lastButtonState)
+                  2020041c    00000004     SpaceInvaders.o (.data._ZL16animationCounter)
+                  20200420    00000004     libc.a : defs.c.obj (.data.__TI_ft_end)
+                  20200424    00000004            : _lock.c.obj (.data._lock)
+                  20200428    00000004            : _lock.c.obj (.data._unlock)
+                  2020042c    00000004     SpaceInvaders.o (.data.gameScore)
+                  20200430    00000002     SpaceInvaders.o (.data._ZL5ShipX)
+                  20200432    00000002     ST7735.o (.data._ZL6_width)
+                  20200434    00000002     ST7735.o (.data._ZL7_height)
+                  20200436    00000001     SpaceInvaders.o (.data._ZL12currentState)
+                  20200437    00000001     SpaceInvaders.o (.data._ZL15currentLanguage)
+                  20200438    00000001     SpaceInvaders.o (.data._ZL18useAlternateSprite)
+                  20200439    00000001     SpaceInvaders.o (.data.enemiesMovingRight)
+                  2020043a    00000001     SpaceInvaders.o (.data.playerLives)
+                  2020043b    00000001     --HOLE--
+                  2020043c    00000001     libsysbm.a : add_device.c.obj (.data.add_device.device_init)
+                  2020043d    00000003     --HOLE--
+                  20200440    00000001     libc.a : memory.c.obj (.data.memory_is_initialized)
+                  20200441    00000003     --HOLE--
+                  20200444    00000001     libsysbm.a : open.c.obj (.data.open.stream_init)
+
+.sysmem    0    20200448    00000200     UNINITIALIZED
+                  20200448    00000010     libc.a : memory.c.obj (.sysmem)
+                  20200458    000001f0     --HOLE--
+
+.bss       0    20200648    000001da     UNINITIALIZED
+                  20200648    00000120     libsysbm.a : trgmsg.c.obj (.bss:_CIOBUF_)
+                  20200768    000000a0     libc.a : defs.c.obj (.bss.__TI_tmpnams)
+                  20200808    00000008     libsysbm.a : hostopen.c.obj (.bss.parmbuf)
+                  20200810    00000004     TExaS.o (.bss.TExaSLogic)
+                  20200814    00000004     TExaS.o (.bss.TExaSadc)
+                  20200818    00000004     libc.a : memory.c.obj (.bss.sys_free)
+                  2020081c    00000002     ST7735.o (.bss.StTextColor)
+                  2020081e    00000001     ST7735.o (.bss._ZL8ColStart)
+                  2020081f    00000001     ST7735.o (.bss._ZL8Rotation)
+                  20200820    00000001     ST7735.o (.bss._ZL8RowStart)
+                  20200821    00000001     ST7735.o (.bss._ZL8TabColor)
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    ./
+       SpaceInvaders.o                3918    2536      583    
+       ST7735.o                       3064    1449      18     
+       Sound.o                        38      4080      0      
+       Clock.o                        516     0         4      
+       SPI.o                          440     0         0      
+       SlidePot.o                     308     0         0      
+       LaunchPad.o                    180     0         0      
+       Lab9HMain.o                    146     4         24     
+       TExaS.o                        64      0         8      
+       Switch.o                       56      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         8730    8069      637    
+                                                               
+    ./ticlang/
+       startup_mspm0g3507_ticlang.o   60      192       0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         60      192       0      
+                                                               
+    /Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/armv6m-ti-none-eabi/c/libc.a
+       memory.c.obj                   702     0         5      
+       _printfi.c.obj                 658     17        0      
+       fopen.c.obj                    556     0         0      
+       defs.c.obj                     0       0         404    
+       setvbuf.c.obj                  224     0         0      
+       getdevice.c.obj                160     0         0      
+       strcmp-armv6m.S.obj            136     0         0      
+       copy_decompress_lzss.c.obj     124     0         0      
+       fclose.c.obj                   124     0         0      
+       sprintf.c.obj                  90      0         0      
+       autoinit.c.obj                 84      0         0      
+       fflush.c.obj                   82      0         0      
+       exit.c.obj                     56      0         8      
+       boot_cortex_m.c.obj            40      0         0      
+       memccpy.c.obj                  34      0         0      
+       copy_zero_init.c.obj           22      0         0      
+       copy_decompress_none.c.obj     18      0         0      
+       memcpy16.S.obj                 18      0         0      
+       memset16.S.obj                 14      0         0      
+       strlen.c.obj                   14      0         0      
+       _lock.c.obj                    2       0         8      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         3162    17        425    
+                                                               
+    /Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/armv6m-ti-none-eabi/c/libsysbm.a
+       trgmsg.c.obj                   104     0         288    
+       add_device.c.obj               236     0         1      
+       host_device.c.obj              0       0         200    
+       open.c.obj                     160     0         1      
+       hostrename.c.obj               136     0         0      
+       hostlseek.c.obj                108     0         0      
+       hostopen.c.obj                 96      0         8      
+       hostread.c.obj                 88      0         0      
+       hostwrite.c.obj                88      0         0      
+       close.c.obj                    80      0         0      
+       hostclose.c.obj                72      0         0      
+       hostunlink.c.obj               72      0         0      
+       unlink.c.obj                   44      0         0      
+       write.c.obj                    40      0         0      
+       remove.c.obj                   8       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         1332    0         498    
+                                                               
+    /Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/armv6m-ti-none-eabi/libclang_rt.builtins.a
+       aeabi_idivmod.S.obj            86      0         0      
+       aeabi_uidivmod.S.obj           64      0         0      
+       aeabi_memset.S.obj             26      0         0      
+       aeabi_memcpy.S.obj             8       0         0      
+       aeabi_div0.c.obj               2       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         186     0         0      
+                                                               
+       Heap:                          0       0         512    
+       Stack:                         0       0         512    
+       Linker Generated:              0       263       0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   13470   8541      2584   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 000055f8 records: 2, size/record: 8, table size: 16
+	.data: load addr=00005500, load size=000000e3 bytes, run addr=20200000, run size=00000445 bytes, compression=lzss
+	.bss: load addr=000055f0, load size=00000008 bytes, run addr=20200648, run size=000001da bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 000055e4 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                             
+-------   ----                             
+00003319  ADC0_IRQHandler                  
+00003319  ADC1_IRQHandler                  
+00003319  AES_IRQHandler                   
+20200400  AUTHOR                           
+20200404  BusFreq                          
+00003558  C$$EXIT                          
+00002f95  C$$IO$$                          
+00003319  CANFD0_IRQHandler                
+00003319  DAC0_IRQHandler                  
+00003319  DMA_IRQHandler                   
+00003319  Default_Handler                  
+20200368  GAME_OVER_TEXT                   
+00003319  GROUP0_IRQHandler                
+00003319  GROUP1_IRQHandler                
+00002b9d  HOSTclose                        
+00002729  HOSTlseek                        
+0000293d  HOSTopen                         
+0000299d  HOSTread                         
+00002795  HOSTrename                       
+00002be5  HOSTunlink                       
+000029f5  HOSTwrite                        
+00003335  HardFault_Handler                
+00003319  I2C0_IRQHandler                  
+00003319  I2C1_IRQHandler                  
+20200378  LANGUAGE_TEXT                    
+20200388  LIVES_TEXT                       
+20200408  M                                
+00003319  NMI_Handler                      
+20200398  PLAY_AGAIN_TEXT                  
+00003319  PendSV_Handler                   
+00003319  RTC_IRQHandler                   
+00003549  Reset_Handler                    
+202003a8  SCORE_TEXT                       
+000054f8  SHT$$INIT_ARRAY$$Base            
+000054fc  SHT$$INIT_ARRAY$$Limit           
+202003b8  SLIDE_SELECT                     
+00003319  SPI0_IRQHandler                  
+00003319  SPI1_IRQHandler                  
+202003c8  START_TEXT                       
+00003319  SVC_Handler                      
+20200354  Sensor                           
+2020081c  StTextColor                      
+2020040c  StX                              
+20200410  StY                              
+0000204f  SysTick_Handler                  
+20200810  TExaSLogic                       
+20200814  TExaSadc                         
+00003319  TIMA0_IRQHandler                 
+00003319  TIMA1_IRQHandler                 
+00003319  TIMG0_IRQHandler                 
+00003319  TIMG12_IRQHandler                
+00003319  TIMG6_IRQHandler                 
+00002cbd  TIMG7_IRQHandler                 
+00003319  TIMG8_IRQHandler                 
+202003d8  TITLE                            
+0000343d  TI_memcpy_small                  
+000034d3  TI_memset_small                  
+00003319  UART0_IRQHandler                 
+00003319  UART1_IRQHandler                 
+00003319  UART2_IRQHandler                 
+00003319  UART3_IRQHandler                 
+202003e8  WIN_TEXT                         
+20200648  _CIOBUF_                         
+000034e1  _Z10Clock_Freqv                  
+00002801  _Z10FireBulletv                  
+00002aa3  _Z10Sound_Initv                  
+00003461  _Z11Clock_Delayj                 
+000011e9  _Z11Game_Updatev                 
+0000174d  _Z11InitEnemiesv                 
+000023cd  _Z11Menu_Updatev                 
+00002dbd  _Z11SPI_OutDatac                 
+00003351  _Z11ST7735_openPKcji             
+000033e9  _Z11ST7735_readiPcj              
+00003415  _Z11Sound_Shootv                 
+00003511  _Z11Sound_StartPKhj              
+00003389  _Z11Switch_Initv                 
+00001381  _Z12DrawGameOverv                
+00002051  _Z12ST7735_InitR10initRFlags     
+0000351b  _Z12ST7735_closei                
+0000347f  _Z12ST7735_lseekili              
+00002e65  _Z12ST7735_writeiPKcj            
+00002b4b  _Z12Sound_Killedv                
+000034ed  _Z13ST7735_renamePKcS0_          
+00003525  _Z13ST7735_unlinkPKc             
+00000af9  _Z13UpdateEnemiesv               
+00002e99  _Z14Clock_Delay1msj              
+00002449  _Z14LaunchPad_Initv              
+00002c2d  _Z14SPI_OutCommandc              
+00001c4d  _Z14ST7735_OutCharc              
+00002df5  _Z15ActivatePortA_Bv             
+00000399  _Z15CheckCollisionsv             
+00000e8d  _Z15Clock_Init80MHzi             
+000026b5  _Z15FireEnemyBulletss            
+00003039  _Z15ST7735_Color565hhh           
+00001041  _Z15ST7735_DrawCharsscssh        
+00001635  _Z15ST7735_FillRectsssst         
+000030cf  _Z15Sound_Explosionv             
+0000354d  _Z16EnableInterruptsv            
+00003231  _Z16ST7735_OutStringPc           
+00002ecd  _Z16ST7735_SetCursorjj           
+00003551  _Z17DisableInterruptsv           
+0000306b  _Z17GetPointsForEnemyh           
+000008e9  _Z17ST7735_DrawBitmapssPKtss     
+00002349  _Z17ST7735_DrawStringttPcs       
+00003161  _Z17ST7735_FillScreent           
+000020f1  _Z17ST7735_InitPrintf10initRFlags
+00001a6d  _Z18ST7735_SetRotationh          
+00003429  _Z19ST7735_SetTextColort         
+00001efd  _Z20ST7735_DrawFastVLinessst     
+000033a1  _Z6Randomj                       
+0000329d  _Z8Random32v                     
+00001975  _Z8SPI_Initv                     
+000000c1  _Z9Game_Drawv                    
+000024c5  _Z9Game_Initv                    
+00000cd5  _Z9Menu_Drawv                    
+00002cfd  _Z9SPI_Resetv                    
+000032bd  _Z9Switch_Inv                    
+00002c75  _ZN8SlidePot2InEv                
+00002541  _ZN8SlidePot4InitEv              
+00003257  _ZN8SlidePot4SaveEj              
+00003101  _ZN8SlidePot7ConvertEj           
+000032fb  _ZN8SlidePotC1Ejj                
+000032fb  _ZN8SlidePotC2Ejj                
+20200648  __CIOBUF_                        
+20208000  __STACK_END                      
+00000200  __STACK_SIZE                     
+00000200  __SYSMEM_SIZE                    
+00000000  __TI_ATRegion0_region_sz         
+00000000  __TI_ATRegion0_src_addr          
+00000000  __TI_ATRegion0_trg_addr          
+00000000  __TI_ATRegion1_region_sz         
+00000000  __TI_ATRegion1_src_addr          
+00000000  __TI_ATRegion1_trg_addr          
+00000000  __TI_ATRegion2_region_sz         
+00000000  __TI_ATRegion2_src_addr          
+00000000  __TI_ATRegion2_trg_addr          
+000055f8  __TI_CINIT_Base                  
+00005608  __TI_CINIT_Limit                 
+00005608  __TI_CINIT_Warm                  
+000055e4  __TI_Handler_Table_Base          
+000055f0  __TI_Handler_Table_Limit         
+00002aa5  __TI_auto_init_nobinit           
+00002f01  __TI_cleanup                     
+202003f8  __TI_cleanup_ptr                 
+000025bd  __TI_closefile                   
+00002639  __TI_decompress_lzss             
+0000344f  __TI_decompress_none             
+00002af9  __TI_doflush                     
+202003fc  __TI_dtors_ptr                   
+20200420  __TI_ft_end                      
+ffffffff  __TI_pprof_out_hndl              
+00000665  __TI_printfi_minimal             
+ffffffff  __TI_prof_data_size              
+ffffffff  __TI_prof_data_start             
+00002f35  __TI_readmsg                     
+00000000  __TI_static_base__               
+20200768  __TI_tmpnams                     
+00002f69  __TI_writemsg                    
+000033ff  __TI_zero_init_nomemset          
+00002a4d  __aeabi_idiv                     
+0000329b  __aeabi_idiv0                    
+00002a4d  __aeabi_idivmod                  
+000034f9  __aeabi_memclr                   
+000034f9  __aeabi_memclr4                  
+000034f9  __aeabi_memclr8                  
+00003539  __aeabi_memcpy                   
+00003539  __aeabi_memcpy4                  
+00003539  __aeabi_memcpy8                  
+0000348d  __aeabi_memset                   
+0000348d  __aeabi_memset4                  
+0000348d  __aeabi_memset8                  
+00002d3d  __aeabi_uidiv                    
+00002d3d  __aeabi_uidivmod                 
+ffffffff  __binit__                        
+UNDEFED   __mpu_init                       
+20207e00  __stack                          
+20200000  __start___llvm_prf_bits          
+20200000  __start___llvm_prf_cnts          
+20200000  __stop___llvm_prf_bits           
+20200000  __stop___llvm_prf_cnts           
+00003209  _c_int00_noargs                  
+2020023c  _device                          
+2020014c  _ftable                          
+20200424  _lock                            
+0000355d  _nop                             
+202002b4  _stream                          
+20200448  _sys_memory                      
+UNDEFED   _system_post_cinit               
+00003555  _system_pre_init                 
+20200428  _unlock                          
+00003559  abort                            
+00001b61  add_device                       
+00001861  aligned_alloc                    
+ffffffff  binit                            
+00002b4d  close                            
+20200000  enemies                          
+20200439  enemiesMovingRight               
+20200304  enemyBullets                     
+00002f9d  exit                             
+00002fd1  finddevice                       
+00003131  fopen                            
+00001d35  free                             
+00003005  freopen                          
+2020042c  gameScore                        
+0000286d  getdevice                        
+00000000  interruptVectors                 
+0000309d  main                             
+00003505  malloc                           
+00001861  memalign                         
+00003279  memccpy                          
+00002191  open                             
+20200808  parmbuf                          
+2020043a  playerLives                      
+00003541  remove                           
+00001e1d  setvbuf                          
+00002e2d  sprintf                          
+000022c1  strcmp                           
+000034b7  strlen                           
+0000318d  unlink                           
+000031e1  write                            
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                             
+-------   ----                             
+00000000  __TI_ATRegion0_region_sz         
+00000000  __TI_ATRegion0_src_addr          
+00000000  __TI_ATRegion0_trg_addr          
+00000000  __TI_ATRegion1_region_sz         
+00000000  __TI_ATRegion1_src_addr          
+00000000  __TI_ATRegion1_trg_addr          
+00000000  __TI_ATRegion2_region_sz         
+00000000  __TI_ATRegion2_src_addr          
+00000000  __TI_ATRegion2_trg_addr          
+00000000  __TI_static_base__               
+00000000  interruptVectors                 
+000000c1  _Z9Game_Drawv                    
+00000200  __STACK_SIZE                     
+00000200  __SYSMEM_SIZE                    
+00000399  _Z15CheckCollisionsv             
+00000665  __TI_printfi_minimal             
+000008e9  _Z17ST7735_DrawBitmapssPKtss     
+00000af9  _Z13UpdateEnemiesv               
+00000cd5  _Z9Menu_Drawv                    
+00000e8d  _Z15Clock_Init80MHzi             
+00001041  _Z15ST7735_DrawCharsscssh        
+000011e9  _Z11Game_Updatev                 
+00001381  _Z12DrawGameOverv                
+00001635  _Z15ST7735_FillRectsssst         
+0000174d  _Z11InitEnemiesv                 
+00001861  aligned_alloc                    
+00001861  memalign                         
+00001975  _Z8SPI_Initv                     
+00001a6d  _Z18ST7735_SetRotationh          
+00001b61  add_device                       
+00001c4d  _Z14ST7735_OutCharc              
+00001d35  free                             
+00001e1d  setvbuf                          
+00001efd  _Z20ST7735_DrawFastVLinessst     
+0000204f  SysTick_Handler                  
+00002051  _Z12ST7735_InitR10initRFlags     
+000020f1  _Z17ST7735_InitPrintf10initRFlags
+00002191  open                             
+000022c1  strcmp                           
+00002349  _Z17ST7735_DrawStringttPcs       
+000023cd  _Z11Menu_Updatev                 
+00002449  _Z14LaunchPad_Initv              
+000024c5  _Z9Game_Initv                    
+00002541  _ZN8SlidePot4InitEv              
+000025bd  __TI_closefile                   
+00002639  __TI_decompress_lzss             
+000026b5  _Z15FireEnemyBulletss            
+00002729  HOSTlseek                        
+00002795  HOSTrename                       
+00002801  _Z10FireBulletv                  
+0000286d  getdevice                        
+0000293d  HOSTopen                         
+0000299d  HOSTread                         
+000029f5  HOSTwrite                        
+00002a4d  __aeabi_idiv                     
+00002a4d  __aeabi_idivmod                  
+00002aa3  _Z10Sound_Initv                  
+00002aa5  __TI_auto_init_nobinit           
+00002af9  __TI_doflush                     
+00002b4b  _Z12Sound_Killedv                
+00002b4d  close                            
+00002b9d  HOSTclose                        
+00002be5  HOSTunlink                       
+00002c2d  _Z14SPI_OutCommandc              
+00002c75  _ZN8SlidePot2InEv                
+00002cbd  TIMG7_IRQHandler                 
+00002cfd  _Z9SPI_Resetv                    
+00002d3d  __aeabi_uidiv                    
+00002d3d  __aeabi_uidivmod                 
+00002dbd  _Z11SPI_OutDatac                 
+00002df5  _Z15ActivatePortA_Bv             
+00002e2d  sprintf                          
+00002e65  _Z12ST7735_writeiPKcj            
+00002e99  _Z14Clock_Delay1msj              
+00002ecd  _Z16ST7735_SetCursorjj           
+00002f01  __TI_cleanup                     
+00002f35  __TI_readmsg                     
+00002f69  __TI_writemsg                    
+00002f95  C$$IO$$                          
+00002f9d  exit                             
+00002fd1  finddevice                       
+00003005  freopen                          
+00003039  _Z15ST7735_Color565hhh           
+0000306b  _Z17GetPointsForEnemyh           
+0000309d  main                             
+000030cf  _Z15Sound_Explosionv             
+00003101  _ZN8SlidePot7ConvertEj           
+00003131  fopen                            
+00003161  _Z17ST7735_FillScreent           
+0000318d  unlink                           
+000031e1  write                            
+00003209  _c_int00_noargs                  
+00003231  _Z16ST7735_OutStringPc           
+00003257  _ZN8SlidePot4SaveEj              
+00003279  memccpy                          
+0000329b  __aeabi_idiv0                    
+0000329d  _Z8Random32v                     
+000032bd  _Z9Switch_Inv                    
+000032fb  _ZN8SlidePotC1Ejj                
+000032fb  _ZN8SlidePotC2Ejj                
+00003319  ADC0_IRQHandler                  
+00003319  ADC1_IRQHandler                  
+00003319  AES_IRQHandler                   
+00003319  CANFD0_IRQHandler                
+00003319  DAC0_IRQHandler                  
+00003319  DMA_IRQHandler                   
+00003319  Default_Handler                  
+00003319  GROUP0_IRQHandler                
+00003319  GROUP1_IRQHandler                
+00003319  I2C0_IRQHandler                  
+00003319  I2C1_IRQHandler                  
+00003319  NMI_Handler                      
+00003319  PendSV_Handler                   
+00003319  RTC_IRQHandler                   
+00003319  SPI0_IRQHandler                  
+00003319  SPI1_IRQHandler                  
+00003319  SVC_Handler                      
+00003319  TIMA0_IRQHandler                 
+00003319  TIMA1_IRQHandler                 
+00003319  TIMG0_IRQHandler                 
+00003319  TIMG12_IRQHandler                
+00003319  TIMG6_IRQHandler                 
+00003319  TIMG8_IRQHandler                 
+00003319  UART0_IRQHandler                 
+00003319  UART1_IRQHandler                 
+00003319  UART2_IRQHandler                 
+00003319  UART3_IRQHandler                 
+00003335  HardFault_Handler                
+00003351  _Z11ST7735_openPKcji             
+00003389  _Z11Switch_Initv                 
+000033a1  _Z6Randomj                       
+000033e9  _Z11ST7735_readiPcj              
+000033ff  __TI_zero_init_nomemset          
+00003415  _Z11Sound_Shootv                 
+00003429  _Z19ST7735_SetTextColort         
+0000343d  TI_memcpy_small                  
+0000344f  __TI_decompress_none             
+00003461  _Z11Clock_Delayj                 
+0000347f  _Z12ST7735_lseekili              
+0000348d  __aeabi_memset                   
+0000348d  __aeabi_memset4                  
+0000348d  __aeabi_memset8                  
+000034b7  strlen                           
+000034d3  TI_memset_small                  
+000034e1  _Z10Clock_Freqv                  
+000034ed  _Z13ST7735_renamePKcS0_          
+000034f9  __aeabi_memclr                   
+000034f9  __aeabi_memclr4                  
+000034f9  __aeabi_memclr8                  
+00003505  malloc                           
+00003511  _Z11Sound_StartPKhj              
+0000351b  _Z12ST7735_closei                
+00003525  _Z13ST7735_unlinkPKc             
+00003539  __aeabi_memcpy                   
+00003539  __aeabi_memcpy4                  
+00003539  __aeabi_memcpy8                  
+00003541  remove                           
+00003549  Reset_Handler                    
+0000354d  _Z16EnableInterruptsv            
+00003551  _Z17DisableInterruptsv           
+00003555  _system_pre_init                 
+00003558  C$$EXIT                          
+00003559  abort                            
+0000355d  _nop                             
+000054f8  SHT$$INIT_ARRAY$$Base            
+000054fc  SHT$$INIT_ARRAY$$Limit           
+000055e4  __TI_Handler_Table_Base          
+000055f0  __TI_Handler_Table_Limit         
+000055f8  __TI_CINIT_Base                  
+00005608  __TI_CINIT_Limit                 
+00005608  __TI_CINIT_Warm                  
+20200000  __start___llvm_prf_bits          
+20200000  __start___llvm_prf_cnts          
+20200000  __stop___llvm_prf_bits           
+20200000  __stop___llvm_prf_cnts           
+20200000  enemies                          
+2020014c  _ftable                          
+2020023c  _device                          
+202002b4  _stream                          
+20200304  enemyBullets                     
+20200354  Sensor                           
+20200368  GAME_OVER_TEXT                   
+20200378  LANGUAGE_TEXT                    
+20200388  LIVES_TEXT                       
+20200398  PLAY_AGAIN_TEXT                  
+202003a8  SCORE_TEXT                       
+202003b8  SLIDE_SELECT                     
+202003c8  START_TEXT                       
+202003d8  TITLE                            
+202003e8  WIN_TEXT                         
+202003f8  __TI_cleanup_ptr                 
+202003fc  __TI_dtors_ptr                   
+20200400  AUTHOR                           
+20200404  BusFreq                          
+20200408  M                                
+2020040c  StX                              
+20200410  StY                              
+20200420  __TI_ft_end                      
+20200424  _lock                            
+20200428  _unlock                          
+2020042c  gameScore                        
+20200439  enemiesMovingRight               
+2020043a  playerLives                      
+20200448  _sys_memory                      
+20200648  _CIOBUF_                         
+20200648  __CIOBUF_                        
+20200768  __TI_tmpnams                     
+20200808  parmbuf                          
+20200810  TExaSLogic                       
+20200814  TExaSadc                         
+2020081c  StTextColor                      
+20207e00  __stack                          
+20208000  __STACK_END                      
+ffffffff  __TI_pprof_out_hndl              
+ffffffff  __TI_prof_data_size              
+ffffffff  __TI_prof_data_start             
+ffffffff  __binit__                        
+ffffffff  binit                            
+UNDEFED   __mpu_init                       
+UNDEFED   _system_post_cinit               
+
+[220 symbols]

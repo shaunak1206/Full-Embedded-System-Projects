@@ -1,0 +1,490 @@
+******************************************************************************
+            TI ARM Clang Linker Unix v4.0.1                    
+******************************************************************************
+>> Linked Thu Mar 20 13:44:50 2025
+
+OUTPUT FILE NAME:   <ECE319K_Lab2H.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00001101
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00001478  0001eb88  R  X
+  SRAM                  20200000   00008000  000005e1  00007a1f  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00001478   00001478    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00001190   00001190    r-x .text
+  00001250    00001250    000001f8   000001f8    r-- .rodata
+  00001448    00001448    00000030   00000030    r-- .cinit
+20200000    20200000    000003e4   00000000    rw-
+  20200000    20200000    00000200   00000000    rw- .sysmem
+  20200200    20200200    000001cd   00000000    rw- .bss
+  202003d0    202003d0    00000014   00000000    rw- .data
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
+
+.text      0    000000c0    00001190     
+                  000000c0    00000300     ECE319K_Lab2H.o (.text)
+                  000003c0    000002fc     ECE319K_Lab2Hmain.o (.text.TIMG0_IRQHandler)
+                  000006bc    000001b4     Clock.o (.text.Clock_Init80MHz)
+                  00000870    00000100     Dump.o (.text.Debug_Duty)
+                  00000970    000000e8     UARTbusywait.o (.text.UART_Init)
+                  00000a58    000000e4     ECE319K_Lab2Hmain.o (.text.main)
+                  00000b3c    000000b0     Dump.o (.text.Debug_Period)
+                  00000bec    000000a4     ECE319K_Lab2Hmain.o (.text.CheckInit)
+                  00000c90    00000088     libc.a : strcmp-armv6m.S.obj (.text:strcmp)
+                  00000d18    0000007c     LaunchPad.o (.text.LaunchPad_Init)
+                  00000d94    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00000e10    00000064     Dump.o (.text.Dump)
+                  00000e74    00000060     Timer.o (.text.TimerG12_Init)
+                  00000ed4    0000005c     ECE319K_Lab2Hmain.o (.text.TIMG7_IRQHandler)
+                  00000f30    00000050     Dump.o (.text.Debug_Dump)
+                  00000f80    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00000fc0    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00000ffc    00000038     LaunchPad.o (.text.ActivatePortA_B)
+                  00001034    00000036     UART.o (.text.UART_OutUDec)
+                  0000106a    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  0000106c    00000034     ECE319K_Lab2Hmain.o (.text.EndLab2)
+                  000010a0    00000034     ECE319K_Lab2Hmain.o (.text.setUpper)
+                  000010d4    0000002c     UARTbusywait.o (.text.UART_OutChar)
+                  00001100    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  00001128    00000026     UART.o (.text.UART_OutString)
+                  0000114e    00000002     --HOLE-- [fill = 0]
+                  00001150    00000020     ECE319K_Lab2Hmain.o (.text.Random32)
+                  00001170    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  0000118c    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  000011a8    00000018     ECE319K_Lab2Hmain.o (.text.Random)
+                  000011c0    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  000011d6    00000002     --HOLE-- [fill = 0]
+                  000011d8    00000014     Dump.o (.text.Debug_Init)
+                  000011ec    00000012     libc.a : memcpy16.S.obj (.text:TI_memcpy_small)
+                  000011fe    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  00001210    00000010     Clock.o (.text.Clock_Delay)
+                  00001220    00000010     LaunchPad.o (.text.Delay)
+                  00001230    0000000c     Clock.o (.text.Clock_Freq)
+                  0000123c    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  00001244    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  00001248    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  0000124c    00000004            : exit.c.obj (.text:abort)
+
+.cinit     0    00001448    00000030     
+                  00001448    0000000c     (__TI_handler_table)
+                  00001454    0000000b     (.cinit..data.load) [load image, compression = lzss]
+                  0000145f    00000001     --HOLE-- [fill = 0]
+                  00001460    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00001468    00000010     (__TI_cinit_table)
+
+.rodata    0    00001250    000001f8     
+                  00001250    000000d0     ECE319K_Lab2Hmain.o (.rodata.Table)
+                  00001320    00000024     ECE319K_Lab2Hmain.o (.rodata.str1.155703307697723648131)
+                  00001344    00000023     ECE319K_Lab2Hmain.o (.rodata.str1.162515654573159224661)
+                  00001367    00000022     ECE319K_Lab2Hmain.o (.rodata.str1.165502521614982684671)
+                  00001389    0000001f     ECE319K_Lab2Hmain.o (.rodata.str1.174930766036349337161)
+                  000013a8    0000001c     ECE319K_Lab2Hmain.o (.rodata.str1.171016965458660467751)
+                  000013c4    00000010     ECE319K_Lab2Hmain.o (.rodata.InMux)
+                  000013d4    00000010     ECE319K_Lab2Hmain.o (.rodata.StartMask)
+                  000013e4    0000000e     ECE319K_Lab2Hmain.o (.rodata.str1.79262121804255714941)
+                  000013f2    0000000d     ECE319K_Lab2Hmain.o (.rodata.str1.108713378209419762111)
+                  000013ff    00000001     --HOLE-- [fill = 0]
+                  00001400    0000000c     ECE319K_Lab2Hmain.o (.rodata.LEDMask)
+                  0000140c    0000000c     ECE319K_Lab2Hmain.o (.rodata.OutMux)
+                  00001418    0000000b     ECE319K_Lab2Hmain.o (.rodata.str1.166008713790688936721)
+                  00001423    0000000b     ECE319K_Lab2Hmain.o (.rodata.str1.3800786842121539981)
+                  0000142e    00000008     ECE319K_Lab2Hmain.o (.rodata.str1.116571622258967589991)
+                  00001436    00000007     ECE319K_Lab2Hmain.o (.rodata.str1.91545133318217054921)
+                  0000143d    00000004     ECE319K_Lab2Hmain.o (.rodata.str1.84480763434980169371)
+                  00001441    00000007     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.sysmem    0    20200000    00000200     UNINITIALIZED
+                  20200000    00000010     libc.a : memory.c.obj (.sysmem)
+                  20200010    000001f0     --HOLE--
+
+.bss       0    20200200    000001cd     UNINITIALIZED
+                  20200200    000000c8     (.common:DataBuffer)
+                  202002c8    000000c8     (.common:TimeBuffer)
+                  20200390    00000010     (.common:Wave)
+                  202003a0    00000004     (.common:DebugCnt)
+                  202003a4    00000004     (.common:FirstCount)
+                  202003a8    00000004     (.common:M)
+                  202003ac    00000004     (.common:Period)
+                  202003b0    00000004     (.common:SizeofEID)
+                  202003b4    00000004     (.common:StartCount)
+                  202003b8    00000004     (.common:TExaSadc)
+                  202003bc    00000004     (.common:Theperiod)
+                  202003c0    00000004     (.common:WaveIndex)
+                  202003c4    00000004     (.common:dutycycle)
+                  202003c8    00000004     (.common:mode)
+                  202003cc    00000001     (.common:Letter)
+
+.data      0    202003d0    00000014     UNINITIALIZED
+                  202003d0    00000004     Clock.o (.data.BusFreq)
+                  202003d4    00000004     ECE319K_Lab2Hmain.o (.data.Mode0)
+                  202003d8    00000004     ECE319K_Lab2Hmain.o (.data.Mode1)
+                  202003dc    00000004     ECE319K_Lab2Hmain.o (.data.Score)
+                  202003e0    00000004     ECE319K_Lab2Hmain.o (.data.Time)
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    ./
+       ECE319K_Lab2Hmain.o            1408   496       65     
+       Dump.o                         632    0         412    
+       ECE319K_Lab2H.o                768    0         0      
+       Clock.o                        464    0         4      
+       UARTbusywait.o                 276    0         0      
+       LaunchPad.o                    196    0         0      
+       Timer.o                        96     0         0      
+       UART.o                         92     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         3932   496       481    
+                                                              
+    ./ticlang/
+       startup_mspm0g3507_ticlang.o   60     192       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         60     192       0      
+                                                              
+    /Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/armv6m-ti-none-eabi/c/libc.a
+       strcmp-armv6m.S.obj            136    0         0      
+       copy_decompress_lzss.c.obj     124    0         0      
+       autoinit.c.obj                 60     0         0      
+       boot_cortex_m.c.obj            40     0         0      
+       copy_zero_init.c.obj           22     0         0      
+       copy_decompress_none.c.obj     18     0         0      
+       memcpy16.S.obj                 18     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         426    0         0      
+                                                              
+    /Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/armv6m-ti-none-eabi/libclang_rt.builtins.a
+       aeabi_uidivmod.S.obj           64     0         0      
+       aeabi_memcpy.S.obj             8      0         0      
+       aeabi_div0.c.obj               2      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         74     0         0      
+                                                              
+       Heap:                          0      0         512    
+       Stack:                         0      0         512    
+       Linker Generated:              0      47        0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   4492   735       1505   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00001468 records: 2, size/record: 8, table size: 16
+	.data: load addr=00001454, load size=0000000b bytes, run addr=202003d0, run size=00000014 bytes, compression=lzss
+	.bss: load addr=00001460, load size=00000008 bytes, run addr=20200200, run size=000001cd bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00001448 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+00001171  ADC0_IRQHandler               
+00001171  ADC1_IRQHandler               
+00001171  AES_IRQHandler                
+00000ffd  ActivatePortA_B               
+202003d0  BusFreq                       
+0000124c  C$$EXIT                       
+00001171  CANFD0_IRQHandler             
+00000bed  CheckInit                     
+00001211  Clock_Delay                   
+00001231  Clock_Freq                    
+000006bd  Clock_Init80MHz               
+00001171  DAC0_IRQHandler               
+00001171  DMA_IRQHandler                
+20200200  DataBuffer                    
+202003a0  DebugCnt                      
+00000f31  Debug_Dump                    
+00000871  Debug_Duty                    
+000011d9  Debug_Init                    
+00000b3d  Debug_Period                  
+00001171  Default_Handler               
+00001221  Delay                         
+00000e11  Dump                          
+000000c0  EID                           
+0000106d  EndLab2                       
+202003a4  FirstCount                    
+00001171  GROUP0_IRQHandler             
+00001171  GROUP1_IRQHandler             
+0000118d  HardFault_Handler             
+00001171  I2C0_IRQHandler               
+00001171  I2C1_IRQHandler               
+000013c4  InMux                         
+00001400  LEDMask                       
+000002d0  Lab2                          
+00000d19  LaunchPad_Init                
+202003cc  Letter                        
+202003a8  M                             
+202003d4  Mode0                         
+202003d8  Mode1                         
+00001171  NMI_Handler                   
+0000140c  OutMux                        
+00001171  PendSV_Handler                
+202003ac  Period                        
+00001171  RTC_IRQHandler                
+000011a9  Random                        
+00001151  Random32                      
+00001245  Reset_Handler                 
+00001171  SPI0_IRQHandler               
+00001171  SPI1_IRQHandler               
+00001171  SVC_Handler                   
+202003dc  Score                         
+202003b0  SizeofEID                     
+202003b4  StartCount                    
+000013d4  StartMask                     
+00001171  SysTick_Handler               
+202003b8  TExaSadc                      
+00001171  TIMA0_IRQHandler              
+00001171  TIMA1_IRQHandler              
+000003c1  TIMG0_IRQHandler              
+00001171  TIMG12_IRQHandler             
+00001171  TIMG6_IRQHandler              
+00000ed5  TIMG7_IRQHandler              
+00001171  TIMG8_IRQHandler              
+000011ed  TI_memcpy_small               
+00001250  Table                         
+202003bc  Theperiod                     
+202003e0  Time                          
+202002c8  TimeBuffer                    
+00000e75  TimerG12_Init                 
+00001171  UART0_IRQHandler              
+00001171  UART1_IRQHandler              
+00001171  UART2_IRQHandler              
+00001171  UART3_IRQHandler              
+00000971  UART_Init                     
+000010d5  UART_OutChar                  
+00001129  UART_OutString                
+00001035  UART_OutUDec                  
+20200390  Wave                          
+202003c0  WaveIndex                     
+20208000  __STACK_END                   
+00000200  __STACK_SIZE                  
+00000200  __SYSMEM_SIZE                 
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00001468  __TI_CINIT_Base               
+00001478  __TI_CINIT_Limit              
+00001478  __TI_CINIT_Warm               
+00001448  __TI_Handler_Table_Base       
+00001454  __TI_Handler_Table_Limit      
+00000fc1  __TI_auto_init_nobinit_nopinit
+00000d95  __TI_decompress_lzss          
+000011ff  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+000011c1  __TI_zero_init_nomemset       
+0000106b  __aeabi_idiv0                 
+0000123d  __aeabi_memcpy                
+0000123d  __aeabi_memcpy4               
+0000123d  __aeabi_memcpy8               
+00000f81  __aeabi_uidiv                 
+00000f81  __aeabi_uidivmod              
+ffffffff  __binit__                     
+UNDEFED   __mpu_init                    
+20207e00  __stack                       
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+00001101  _c_int00_noargs               
+20200000  _sys_memory                   
+UNDEFED   _system_post_cinit            
+00001249  _system_pre_init              
+0000124d  abort                         
+ffffffff  binit                         
+202003c4  dutycycle                     
+00000000  interruptVectors              
+00000a59  main                          
+202003c8  mode                          
+000010a1  setUpper                      
+00000c91  strcmp                        
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00000000  __TI_static_base__            
+00000000  interruptVectors              
+000000c0  EID                           
+00000200  __STACK_SIZE                  
+00000200  __SYSMEM_SIZE                 
+000002d0  Lab2                          
+000003c1  TIMG0_IRQHandler              
+000006bd  Clock_Init80MHz               
+00000871  Debug_Duty                    
+00000971  UART_Init                     
+00000a59  main                          
+00000b3d  Debug_Period                  
+00000bed  CheckInit                     
+00000c91  strcmp                        
+00000d19  LaunchPad_Init                
+00000d95  __TI_decompress_lzss          
+00000e11  Dump                          
+00000e75  TimerG12_Init                 
+00000ed5  TIMG7_IRQHandler              
+00000f31  Debug_Dump                    
+00000f81  __aeabi_uidiv                 
+00000f81  __aeabi_uidivmod              
+00000fc1  __TI_auto_init_nobinit_nopinit
+00000ffd  ActivatePortA_B               
+00001035  UART_OutUDec                  
+0000106b  __aeabi_idiv0                 
+0000106d  EndLab2                       
+000010a1  setUpper                      
+000010d5  UART_OutChar                  
+00001101  _c_int00_noargs               
+00001129  UART_OutString                
+00001151  Random32                      
+00001171  ADC0_IRQHandler               
+00001171  ADC1_IRQHandler               
+00001171  AES_IRQHandler                
+00001171  CANFD0_IRQHandler             
+00001171  DAC0_IRQHandler               
+00001171  DMA_IRQHandler                
+00001171  Default_Handler               
+00001171  GROUP0_IRQHandler             
+00001171  GROUP1_IRQHandler             
+00001171  I2C0_IRQHandler               
+00001171  I2C1_IRQHandler               
+00001171  NMI_Handler                   
+00001171  PendSV_Handler                
+00001171  RTC_IRQHandler                
+00001171  SPI0_IRQHandler               
+00001171  SPI1_IRQHandler               
+00001171  SVC_Handler                   
+00001171  SysTick_Handler               
+00001171  TIMA0_IRQHandler              
+00001171  TIMA1_IRQHandler              
+00001171  TIMG12_IRQHandler             
+00001171  TIMG6_IRQHandler              
+00001171  TIMG8_IRQHandler              
+00001171  UART0_IRQHandler              
+00001171  UART1_IRQHandler              
+00001171  UART2_IRQHandler              
+00001171  UART3_IRQHandler              
+0000118d  HardFault_Handler             
+000011a9  Random                        
+000011c1  __TI_zero_init_nomemset       
+000011d9  Debug_Init                    
+000011ed  TI_memcpy_small               
+000011ff  __TI_decompress_none          
+00001211  Clock_Delay                   
+00001221  Delay                         
+00001231  Clock_Freq                    
+0000123d  __aeabi_memcpy                
+0000123d  __aeabi_memcpy4               
+0000123d  __aeabi_memcpy8               
+00001245  Reset_Handler                 
+00001249  _system_pre_init              
+0000124c  C$$EXIT                       
+0000124d  abort                         
+00001250  Table                         
+000013c4  InMux                         
+000013d4  StartMask                     
+00001400  LEDMask                       
+0000140c  OutMux                        
+00001448  __TI_Handler_Table_Base       
+00001454  __TI_Handler_Table_Limit      
+00001468  __TI_CINIT_Base               
+00001478  __TI_CINIT_Limit              
+00001478  __TI_CINIT_Warm               
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+20200000  _sys_memory                   
+20200200  DataBuffer                    
+202002c8  TimeBuffer                    
+20200390  Wave                          
+202003a0  DebugCnt                      
+202003a4  FirstCount                    
+202003a8  M                             
+202003ac  Period                        
+202003b0  SizeofEID                     
+202003b4  StartCount                    
+202003b8  TExaSadc                      
+202003bc  Theperiod                     
+202003c0  WaveIndex                     
+202003c4  dutycycle                     
+202003c8  mode                          
+202003cc  Letter                        
+202003d0  BusFreq                       
+202003d4  Mode0                         
+202003d8  Mode1                         
+202003dc  Score                         
+202003e0  Time                          
+20207e00  __stack                       
+20208000  __STACK_END                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[128 symbols]

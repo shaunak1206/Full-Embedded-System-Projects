@@ -1,0 +1,47 @@
+[
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/inc/Clock.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/inc/Dump.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/ECE319K_Lab2.s"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/ECE319K_Lab2main.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/inc/LaunchPad.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/inc/Timer.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/inc/UART.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/inc/UARTbusywait.c"
+   },
+   {
+      "directory" : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug",
+      "command"   : "clang++ -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source/third_party/CMSIS/Core/Include\" -I\"/Applications/ti/mspm0_sdk_2_03_00_07/source\" -D__MSPM0G3507__ -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/armv7em-ti-none-eabihf/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c++/v1\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/lib/clang/18/include\" -isystem\"/Applications/ti/ccs2000/ccs/tools/compiler/ti-cgt-armllvm_4.0.1.LTS/include/c\" -I\"/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/Debug/syscfg\"",
+      "file"      : "/Users/manaspathak11/Desktop/MSPM0_ValvanoWare/ECE319K_Lab2/ticlang/startup_mspm0g3507_ticlang.c"
+   }
+]
