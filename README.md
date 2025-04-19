@@ -1,6 +1,6 @@
-# Embedded Systems Projects Portfolio
+# Embedded Systems Projects
 
-This repository contains a collection of embedded systems projects developed using the Texas Instruments MSPM0 microcontroller family. These projects demonstrate proficiency in real-time systems, hardware interfacing, and low-level programming.
+This repository contains a collection of my embedded systems projects developed using the Texas Instruments MSPM0 microcontroller family. These projects demonstrate my work with real-time systems, hardware interfacing, and low-level programming.
 
 ## 🚀 Featured Projects
 
