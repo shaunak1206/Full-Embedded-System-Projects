@@ -106,4 +106,4 @@ This project is licensed under the terms specified in the license.txt file.
 
 ---
 
-*Created by Shaunak Kapur* 
+*Created by Shaunak Kapur & Manas Pathak* 
