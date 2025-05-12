@@ -106,4 +106,4 @@ This project is licensed under the terms specified in the license.txt file.
 
 ---
 
-*Created by Manas Pathak - Embedded Systems Engineer* 
+*Created by Shaunak Kapur* 
